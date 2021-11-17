@@ -1,0 +1,53 @@
+
+# Python virtual environment
+.venv
+
+# MySQL conf file
+my.cnf
+
+# Node modules
+node_modules/ 
+# Just adding a directory name makes Git ignore all instances of the directory, no matter which subdirectory it is in.
+# Following is the way to keep my_modules in git while ignoring all other modules. 
+# node_modules/*
+# !node_modules/my_modules 
+
+# testing
+coverage/
+
+# debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Output of 'npm pack'
+*.tgz
+
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode
+
+### VisualStudioCode ###
+.vscode/*
+.vscode/**/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# Support for Project snippet scope
+!.vscode/*.code-snippets
+
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
+

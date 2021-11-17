@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--Following meta tag viewport tells the browser to use device screen width and set zoom level to '1' to read texts naturally-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Quality of Life</title>
+
+        <!--Following two meta tags are for search engine info-->
+        <meta name="description" content="A blog with Django backend and React frontend.">
+        <meta name="author" content="Nur Arafat">
+
+        <!--Following five meta (og -> open graph) tags are important for social media posts-->
+        <meta property="og:title" content="Quality of Life">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://127.0.0.1:8000/">
+        <meta property="og:description" content="A blog with Django backend and React frontend.">
+        <meta property="og:image" content="image.png">
+
+        <!--Following three tags are for browser icons. Add these in the root directory. ico->legacy, svg->modern, png->apple-->
+        <link rel="icon" href="/favicon.ico">
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    </head>
+    <body>
+        <div id="app">
+            <!-- React will load here -->
+        </div>
+    </body>
+    {% load static %}
+    <script src={% static "frontend/main.js" %}></script>
+</html>

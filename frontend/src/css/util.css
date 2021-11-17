@@ -1,0 +1,7 @@
+.borderless-cell {
+  border: none !important;
+}
+
+.pagination-wrapper {
+  overflow-x: auto;
+}

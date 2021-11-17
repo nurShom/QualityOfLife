@@ -1,0 +1,7 @@
+# Required
+django
+djangorestframework
+
+# For MySQL
+mysql-connector
+pymysql
