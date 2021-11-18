@@ -2,6 +2,9 @@
 # Python virtual environment
 .venv
 
+# .env File
+.env
+
 # MySQL conf file
 my.cnf
 
@@ -14,6 +17,12 @@ node_modules/
 
 # testing
 coverage/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.class
 
 # debug logs
 npm-debug.log*

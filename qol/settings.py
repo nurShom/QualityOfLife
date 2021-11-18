@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+# import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-f7g^*fazml==e-b4yt(ony5u(67vvsypw6gej7955c8w-fssmj'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -95,13 +97,13 @@ REST_FRAMEWORK = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'qualityoflife', # Database name
-        'OPTIONS': {
-            'read_default_file': './my.cnf', # Reading user and password from this config file
-        },
-        # 'USER': 'quality',
-        # 'PASSWORD': 'password', # Change this so it can be read from environment
-        'HOST':'localhost',
+        'NAME': config('MYSQL_DB_NAME'),
+        # 'OPTIONS': {
+        #     'read_default_file': './my.cnf', # Reading user and password from this config file
+        # },
+        'USER': config('MYSQL_USER'),
+        'PASSWORD': config('MYSQL_PASSWORD'),
+        'HOST': config('MYSQL_DB_HOST'),
         'PORT':'',
     },
     # 'default': {
