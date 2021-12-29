@@ -9,7 +9,7 @@ import "../css/util.css"
 class PostList extends Component {
   truncText = (text) => {
     if (text.length > 60) {
-      return text.substring(0, 60) + "...";
+      return text.substring(0, 58) + "..";
     }
     return text;
   };

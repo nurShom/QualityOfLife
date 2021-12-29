@@ -5,6 +5,23 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch localhost",
+            "type": "firefox",
+            "request": "attach",
+            "reAttach": true,
+            "url": "http://localhost:8000",
+            "webRoot": "${workspaceFolder}",
+            "pathMappings": [
+                {
+                "url": "http://localhost",
+                "path": "${workspaceFolder}"
+                }
+            ],
+            "skipFiles":[
+                "**/node_modules/**",
+            ]
+        },
+        {
             "name": "Python: Django",
             "type": "python",
             "request": "launch",
