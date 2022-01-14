@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 # import os
-from decouple import config
+from decouple import config, Csv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -57,10 +57,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_ALL_ORIGINS = False # This is the default value if not set
-CORS_ALLOWED_ORIGINS  = (
-#   'http://localhost:8000',
-  'http://127.0.0.1:8000',
-)
+CORS_ALLOWED_ORIGINS  = config('CORS_ALLOWED_ORIGINS', cast=Csv())
 
 ROOT_URLCONF = 'qol.urls'
 
