@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --progress --mode development --entry ./src/index.js --output-path ./static/frontend",
+    "dev-watch": "webpack --progress --watch --mode development --entry ./src/index.js --output-path ./static/frontend",
     "prebuild": "echo I automatically run before the build script whenever `npm run build` is called",
     "build": "webpack --mode production --entry ./src/index.js --output-path ./static/frontend",
     "postbuild": "echo I automatically run after the build script whenever `npm run build` is called",
-    "watch": "webpack --progress --watch",
     "sass": "sass --watch ./src/scss/:./static/css/ && sass --watch --style=compressed ./src/scss/:./static/css-compressed/"
   },
   "keywords": [],
